@@ -1,4 +1,3 @@
-```yaml
 name: Refresh Facebook posts
 
 on:
@@ -49,4 +48,3 @@ jobs:
             git push
             echo "Pushed refreshed index.html"
           fi
-```
