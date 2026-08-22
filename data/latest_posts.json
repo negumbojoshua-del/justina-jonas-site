@@ -1,10 +1,22 @@
 {
-  "hash": "5c899178fe2b7ee0994fd0f406d894e031fb3d5efa4e20fb05e46ea176275351",
+  "hash": "c8bd2fe8513dc02f119357c32a63b8e2a88ebc71eb2d817e534bc5512939585e",
   "posts": [
     {
       "index": 0,
-      "preview": "This may be because of a technical error that we're working to get fixed. Try reloading this page."
+      "preview": "Did you know that the Ministry of Justice, Labour and Industrial Relations has an SMS and telephone line for labour-related concerns?"
+    },
+    {
+      "index": 1,
+      "preview": "If you belong to a trade union, please contact your union office or officials to attend to your case"
+    },
+    {
+      "index": 2,
+      "preview": "As workers, let us have faith in our trade unions. They are strategically established to ensure that workers’ wages, working conditions and employment conditions are improved"
+    },
+    {
+      "index": 3,
+      "preview": "Remember, Labour Inspectors have no mandate to negotiate improvements in wages or conditions of employment. That mandate lies with trade unions"
     }
   ],
-  "updated_at": "2026-08-19T16:24:28.188102+00:00"
+  "updated_at": "2026-08-22T20:15:47.322346+00:00"
 }
