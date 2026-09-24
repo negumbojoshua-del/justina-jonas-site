@@ -308,6 +308,83 @@ textarea.ff{resize:none;height:110px;}
 .speech-body strong{color:var(--navy);}
 .speech-body em{color:var(--mute);font-family:'Lora',serif;}
 @media(max-width:768px){.speech-card summary{padding:1.25rem 1.25rem;}.speech-body{padding:0 1.25rem 1.5rem;font-size:14px;}}
+
+/* === RECENT MOMENTS PHOTO GRID === */
+.rm-wrap{background:#fff;padding:4rem 3rem;}
+.rm-in{max-width:1280px;margin:0 auto;}
+.rm-head{text-align:center;margin-bottom:3rem;}
+.rm-head h2{font-family:'Playfair Display',serif;font-size:2.25rem;font-weight:700;color:var(--navy);}
+.rm-head p{max-width:660px;margin:1rem auto 0;color:var(--mute);font-size:1rem;line-height:1.75;}
+.rm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;}
+.rm-card{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:1/1;cursor:pointer;box-shadow:0 4px 14px rgba(13,27,42,.08);transition:transform .3s,box-shadow .3s;background:#e8ecf1;}
+.rm-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(13,27,42,.16);}
+.rm-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;}
+.rm-card:hover img{transform:scale(1.05);}
+.rm-cap{position:absolute;left:0;right:0;bottom:0;padding:1.5rem 1.1rem .9rem;background:linear-gradient(to top,rgba(13,27,42,.85),transparent);color:#fff;font-family:'Playfair Display',serif;font-size:.95rem;font-weight:600;line-height:1.3;}
+@media(max-width:768px){.rm-wrap{padding:2.5rem 1.25rem;}.rm-head h2{font-size:1.7rem;}.rm-grid{grid-template-columns:repeat(2,1fr);gap:.75rem;}.rm-cap{font-size:.8rem;padding:1rem .7rem .6rem;}}
+
+/* === SHAREABLE GRAPHICS === */
+.share-wrap{background:#fff;padding:4rem 3rem;border-top:1px solid var(--bdr);}
+.share-in{max-width:1280px;margin:0 auto;}
+.share-head{text-align:center;margin-bottom:2.5rem;}
+.share-head h3{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:700;color:var(--navy);}
+.share-head p{max-width:620px;margin:.75rem auto 0;color:var(--mute);font-size:.95rem;line-height:1.7;}
+.share-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem;}
+.share-tile{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:1/1;background:#e8ecf1;cursor:pointer;border:1px solid var(--bdr);transition:transform .2s,box-shadow .2s;}
+.share-tile:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(13,27,42,.12);}
+.share-tile img{width:100%;height:100%;object-fit:cover;display:block;}
+.share-tile::after{content:'⤓';position:absolute;top:.5rem;right:.5rem;width:28px;height:28px;background:rgba(255,255,255,.9);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;opacity:0;transition:opacity .2s;}
+.share-tile:hover::after{opacity:1;}
+@media(max-width:768px){.share-wrap{padding:2.5rem 1.25rem;}.share-head h3{font-size:1.35rem;}.share-grid{grid-template-columns:repeat(2,1fr);gap:.6rem;}}
+
+/* === BUDGET 2026 CAMPAIGN === */
+.camp-hero{background:linear-gradient(135deg,#e6ecf5 0%,#c8d5ea 100%);position:relative;overflow:hidden;padding:4rem 3rem 3rem;}
+.camp-hero::before{content:'';position:absolute;top:2rem;left:3rem;width:60px;height:44px;background:linear-gradient(135deg,#1f5db3,#3d7ecf);clip-path:polygon(0 0,55% 0,45% 100%,0 100%,0 60%,15% 60%,15% 0);opacity:.8;}
+.camp-hero-in{max-width:1100px;margin:0 auto;position:relative;z-index:1;text-align:center;padding-top:3rem;}
+.camp-eyebrow{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--goldd);margin-bottom:1rem;padding:5px 16px;background:rgba(255,255,255,.5);border-radius:50px;border:1px solid rgba(201,168,76,.3);}
+.camp-title{font-family:'Playfair Display',serif;font-size:3.25rem;font-weight:700;color:var(--navy);line-height:1.15;}
+.camp-sub{max-width:720px;margin:1.5rem auto 0;font-size:1.05rem;color:rgba(13,27,42,.72);line-height:1.75;}
+.camp-stats{display:flex;gap:2.5rem;justify-content:center;margin-top:2.5rem;flex-wrap:wrap;}
+.camp-stat{text-align:center;}
+.camp-stat-n{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:var(--goldd);line-height:1;}
+.camp-stat-l{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-top:.35rem;}
+.camp-wrap{background:var(--cream);padding:4rem 3rem;}
+.camp-in{max-width:1280px;margin:0 auto;}
+.camp-filter{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-bottom:3rem;}
+.camp-filter button{padding:9px 20px;border-radius:50px;border:1px solid var(--bdr);background:#fff;color:var(--mute);font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s;}
+.camp-filter button:hover{color:var(--goldd);border-color:var(--goldd);}
+.camp-filter button.on{background:var(--gold);color:var(--navy);border-color:var(--gold);}
+.camp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;}
+.camp-card{background:#fff;border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:all .3s;cursor:pointer;}
+.camp-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(13,27,42,.14);border-color:rgba(201,168,76,.35);}
+.camp-thumb{aspect-ratio:1/1;overflow:hidden;background:#e8ecf1;}
+.camp-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;}
+.camp-card:hover .camp-thumb img{transform:scale(1.03);}
+.camp-meta{padding:1rem 1.15rem 1.15rem;}
+.camp-vote{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--goldd);margin-bottom:.4rem;}
+.camp-h{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--navy);line-height:1.35;}
+
+/* Home teaser */
+.camp-teaser{background:linear-gradient(135deg,#eef2f9,#dae3f3);padding:4rem 3rem;}
+.camp-teaser-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;}
+.camp-t-eye{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--goldd);margin-bottom:1rem;padding:5px 16px;background:rgba(255,255,255,.65);border-radius:50px;border:1px solid rgba(201,168,76,.3);}
+.camp-t-txt h2{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:var(--navy);line-height:1.15;}
+.camp-t-txt p{margin-top:1.25rem;color:rgba(13,27,42,.72);font-size:1rem;line-height:1.8;}
+.camp-t-preview{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+.camp-t-preview img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;box-shadow:0 8px 24px rgba(13,27,42,.15);cursor:pointer;transition:transform .3s;}
+.camp-t-preview img:hover{transform:translateY(-3px);}
+@media(max-width:768px){
+  .camp-teaser{padding:2.5rem 1.5rem;}
+  .camp-teaser-in{grid-template-columns:1fr;gap:2rem;}
+  .camp-t-txt h2{font-size:1.7rem;}
+  .camp-hero{padding:2.5rem 1.5rem 2rem;}
+  .camp-hero::before{width:40px;height:30px;top:1.25rem;left:1.5rem;}
+  .camp-hero-in{padding-top:2rem;}
+  .camp-title{font-size:2rem;}
+  .camp-stats{gap:1.25rem;margin-top:1.5rem;}
+  .camp-stat-n{font-size:1.8rem;}
+  .camp-wrap{padding:2.5rem 1.25rem;}
+}
 </style>
 </head>
 <body>
@@ -322,6 +399,7 @@ textarea.ff{resize:none;height:110px;}
   <ul class="nav-ul">
     <li><button class="nb active" onclick="go('home')">Home</button></li>
     <li><button class="nb" onclick="go('about')">About</button></li>
+    <li><button class="nb" onclick="go('budget')">Budget 2026</button></li>
     <li><button class="nb" onclick="go('parl')">Parliamentary Work</button></li>
     <li><button class="nb" onclick="go('community')">Community</button></li>
     <li><button class="nb" onclick="go('media')">Media</button></li>
@@ -338,7 +416,7 @@ textarea.ff{resize:none;height:110px;}
     <div class="W">
       <div class="hero-grid">
         <div class="pwrap">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Hon. Justina Jonas, Member of Parliament" class="pimg"/>
+          <img src="media/photos/portrait-blue-dress.jpg" alt="Hon. Justina Jonas, Member of Parliament" class="pimg"/>
         </div>
         <div class="htxt">
           <div class="qbg">"</div>
@@ -578,6 +656,49 @@ textarea.ff{resize:none;height:110px;}
     </div>
   </section>
 
+  <!-- Recent Moments (curated photo gallery) -->
+  <section class="rm-wrap">
+    <div class="rm-in">
+      <div class="rm-head">
+        <span class="badge bdark">Recent Moments</span>
+        <h2>From the Field &amp; the Assembly</h2>
+        <div class="gline gc"></div>
+        <p>Recent engagements, meetings and moments from Hon. Justina Jonas's parliamentary and public-service work. Click any photo to view it larger.</p>
+      </div>
+      <div class="rm-grid">
+        <div class="rm-card" onclick="jjLb('media/latest/post-01-german-parliament.jpg','Meeting with the German Parliament’s Committee on Labour and Social Affairs')"><img src="media/latest/post-01-german-parliament.jpg" alt="German Parliament committee meeting" loading="lazy"/><div class="rm-cap">German Parliament &mdash; Committee on Labour</div></div>
+        <div class="rm-card" onclick="jjLb('media/latest/post-04-women-caucus.jpg','Parliamentary Women Caucus')"><img src="media/latest/post-04-women-caucus.jpg" alt="Parliamentary Women Caucus" loading="lazy"/><div class="rm-cap">Parliamentary Women Caucus</div></div>
+        <div class="rm-card" onclick="jjLb('media/latest/post-08-social-protection.jpg','Social Protection System under discussion by the Parliament Committee for Poverty Eradication')"><img src="media/latest/post-08-social-protection.jpg" alt="Social Protection Committee session" loading="lazy"/><div class="rm-cap">Social Protection &mdash; Committee Session</div></div>
+        <div class="rm-card" onclick="jjLb('media/latest/post-05-ursula-kukle.jpg','In conversation with Ursula Kukle, ILO Senior Social Protection Specialist')"><img src="media/latest/post-05-ursula-kukle.jpg" alt="With Ursula Kukle, ILO" loading="lazy"/><div class="rm-cap">With Ursula Kukle &mdash; ILO</div></div>
+        <div class="rm-card" onclick="jjLb('media/latest/post-09-ilo-actrav.jpg','Continued conversation with the Director of ILO ACTRAV, started in Geneva')"><img src="media/latest/post-09-ilo-actrav.jpg" alt="ILO ACTRAV dialogue" loading="lazy"/><div class="rm-cap">ILO ACTRAV &mdash; Continued Dialogue</div></div>
+        <div class="rm-card" onclick="jjLb('media/latest/post-10-nakara-factory.jpg','Visit to Nakara Factory')"><img src="media/latest/post-10-nakara-factory.jpg" alt="Nakara Factory visit" loading="lazy"/><div class="rm-cap">Nakara Factory Visit</div></div>
+        <div class="rm-card" onclick="jjLb('media/latest/post-07-swapo-manifesto.jpg','The SWAPO Party Manifesto commitment to Namibian workers is well in progress')"><img src="media/latest/post-07-swapo-manifesto.jpg" alt="SWAPO Manifesto commitment to workers" loading="lazy"/><div class="rm-cap">SWAPO Manifesto &mdash; Workers</div></div>
+        <div class="rm-card" onclick="jjLb('media/latest/post-03-general-shali.jpg','With General Martin Shali')"><img src="media/latest/post-03-general-shali.jpg" alt="With General Martin Shali" loading="lazy"/><div class="rm-cap">With General Martin Shali</div></div>
+        <div class="rm-card" onclick="jjLb('media/latest/post-02-eilla-husab.jpg','Tribute to Comrade Eilla — defending workers at the Husab Mine Construction Project')"><img src="media/latest/post-02-eilla-husab.jpg" alt="Tribute to Comrade Eilla" loading="lazy"/><div class="rm-cap">Tribute to Comrade Eilla</div></div>
+        <div class="rm-card" onclick="jjLb('media/latest/post-06-doer-of-note.jpg','The Doer of Note')"><img src="media/latest/post-06-doer-of-note.jpg" alt="The Doer of Note" loading="lazy"/><div class="rm-cap">The Doer of Note</div></div>
+        <div class="rm-card" onclick="jjLb('media/latest/post-11-recent.jpg','Recent public engagement')"><img src="media/latest/post-11-recent.jpg" alt="Recent engagement" loading="lazy"/><div class="rm-cap">Recent Engagement</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Budget 2026 Campaign Teaser -->
+  <section class="camp-teaser">
+    <div class="camp-teaser-in">
+      <div class="camp-t-txt">
+        <span class="camp-t-eye">Active Campaign</span>
+        <h2>2026/2027 National Budget Contribution</h2>
+        <p>Hon. Justina Jonas is leading a public campaign around this year's budget cycle &mdash; 17 posts covering labour, health, mines, petroleum, gender, ICT, the National Assembly and more. Each post frames a specific vote or Bill and calls out what workers and communities need.</p>
+        <button class="btn-g" onclick="go('budget')">View Full Campaign &#8594;</button>
+      </div>
+      <div class="camp-t-preview">
+        <img src="media/campaign/BIG-05-Labour.png" alt="Too few inspectors to enforce the law" onclick="go('budget')"/>
+        <img src="media/campaign/BIG-06-Mines.png" alt="A just transition for mineworkers" onclick="go('budget')"/>
+        <img src="media/campaign/BIG-08-Gender.png" alt="Gender equality must reach the workplace" onclick="go('budget')"/>
+        <img src="media/campaign/BIG-17-Safety.png" alt="Our labour laws are not ready for offshore work" onclick="go('budget')"/>
+      </div>
+    </div>
+  </section>
+
   <!-- Featured Address -->
   <section class="dk">
     <div class="W">
@@ -601,7 +722,7 @@ textarea.ff{resize:none;height:110px;}
 
   <!-- Parliamentary Work teaser -->
   <section class="pbg">
-    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Parliament of Namibia" class="pbg-img"/>
+    <img src="media/photos/portrait-blue-dress.jpg" alt="Parliament of Namibia" class="pbg-img"/>
     <div class="pbg-ov"></div>
     <div class="Wm pbg-in">
       <div style="text-align:center;margin-bottom:3.5rem">
@@ -623,7 +744,7 @@ textarea.ff{resize:none;height:110px;}
   <section style="background:#fff">
     <div class="W">
       <div class="cg">
-        <div class="cwrap"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Community engagement" class="cimg"/><div class="cov"></div></div>
+        <div class="cwrap"><img src="media/photos/portrait-blue-dress.jpg" alt="Community engagement" class="cimg"/><div class="cov"></div></div>
         <div class="ct">
           <h2>Community Engagement</h2>
           <div class="gline"></div>
@@ -653,7 +774,7 @@ textarea.ff{resize:none;height:110px;}
 <!-- ═════════════════════════════════════════════════ ABOUT ══ -->
 <div id="page-about" class="page">
   <section class="pbg" style="min-height:40vh">
-    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" class="pbg-img"/>
+    <img src="media/photos/portrait-blue-dress.jpg" alt="" class="pbg-img"/>
     <div class="pbg-ov"></div>
     <div class="Wm pbg-in" style="text-align:center">
       <span class="badge blight">Background</span>
@@ -665,14 +786,20 @@ textarea.ff{resize:none;height:110px;}
   <section style="background:#fff">
     <div class="W">
       <div class="cg">
-        <div class="pwrap" style="max-width:440px"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Hon. Justina Jonas" class="pimg"/></div>
+        <div class="pwrap" style="max-width:440px"><img src="media/photos/portrait-blue-dress.jpg" alt="Hon. Justina Jonas" class="pimg"/></div>
         <div class="ct">
-          <span class="badge bdark">8th National Assembly — 2025–2030</span>
-          <h2>Hon. Justina Jonas</h2>
+          <span class="badge bdark">SWAPO Party &middot; 8th National Assembly (2025&ndash;2030)</span>
+          <h2>Hon. Justina Jonas, MP</h2>
           <div class="gline"></div>
-          <p>Hon. Justina Jonas is a Member of Parliament of the Republic of Namibia, serving in the 8th National Assembly (2025–2030) as a representative of the SWAPO Party. She is the Chairperson of the Standing Committee on Poverty Eradication, Labour and Industrial Relations.</p>
-          <p>With a strong background in the labour movement, she previously served as General Secretary of the Metal and Allied Namibian Workers Union (MANWU). Before entering trade unionism, she worked as a security guard, kapana vendor, and hairdresser — experiences that ground her legislative work in the lived realities of ordinary Namibians.</p>
-          <p>She holds a Bachelor of Business Administration from Stadio Namibia (2024) and championed Namibia's ratification of ILO Convention 190 on violence and harassment in the workplace — making Namibia the first African country to ratify it in 2020.</p>
+          <p>Hon. Justina Jonas is a Member of Parliament of the Republic of Namibia and a long-serving trade unionist with more than two decades of experience in the labour movement. She serves in the 8th National Assembly as a representative of the SWAPO Party and is the Chairperson of the Parliamentary Standing Committee on Poverty Eradication, Labour and Industrial Relations.</p>
+          <p>Born on 10 February 1978, Hon. Jonas grew up in Ohadiwa in northern Namibia. Her early life was shaped by rural life and responsibility, experiences that contributed to her commitment to working people and social justice. Before entering the labour movement, she worked in different occupations, including as a security guard, kapana vendor and hairdresser.</p>
+          <p>Her trade union journey began in the construction sector, where she became a member of the Metal and Allied Namibian Workers Union (MANWU). In 2003, she moved to Windhoek and joined MANWU, initially volunteering before becoming the union's first receptionist. She subsequently served as a branch organiser and became involved in worker education and labour organising.</p>
+          <p>Through dedication, worker education and organisational leadership, Hon. Jonas rose through the ranks of MANWU and was elected its first woman General Secretary in 2012. She served in that position for many years, representing workers in collective bargaining, labour relations, occupational health and safety, social protection, worker education and other matters affecting working people. She was again elected General Secretary at MANWU's 10th National Congress in 2024.</p>
+          <p>Her transition from trade union leadership to Parliament in 2025 marked a continuation of her public-service commitment. In her maiden parliamentary statement, she described herself as coming from the workers' movement and emphasised her responsibility to bring workers' concerns and experiences into the National Assembly.</p>
+          <p>As a Parliamentarian, Hon. Jonas has focused particularly on labour rights, employment creation, social protection, poverty eradication, decent work, occupational health and safety, industrial relations and inclusive national development. Her parliamentary work includes oversight of policies and programmes affecting workers, vulnerable communities and Namibia's social protection system.</p>
+          <p>Hon. Jonas is studying a Bachelor of Business Administration at STADIO Namibia and she holds a Higher Certificate in Management, a Diploma in Labour Studies and a Certificate in Political Science. She has also undertaken training in labour studies, social security protection, corporate governance, occupational health and safety, social dialogue and worker education.</p>
+          <p>Her public-service journey reflects a progression from the workplace and trade union movement into national leadership. She continues to advocate for the dignity of work, protection of workers' rights, social justice and inclusive economic development, while contributing to Namibia's legislative and parliamentary oversight processes.</p>
+          <blockquote style="margin:2rem 0 0;padding:1.5rem 1.75rem;border-left:4px solid var(--gold);background:rgba(201,168,76,.06);border-radius:0 10px 10px 0;font-family:'Lora',serif;font-style:italic;font-size:1.1rem;line-height:1.7;color:var(--navy)">&ldquo;From the workplace to Parliament, my mission remains to serve, represent and empower working people and all Namibians.&rdquo;</blockquote>
         </div>
       </div>
     </div>
@@ -718,10 +845,137 @@ textarea.ff{resize:none;height:110px;}
   <footer class="foot"><p class="foot-motto">Serve with Passion &middot; Serve with Love</p><p>&copy; 2025&ndash;2026 Hon. Justina Jonas &mdash; Member of Parliament, Republic of Namibia. All rights reserved.</p></footer>
 </div>
 
+<!-- ══════════════════════════════════════════ BUDGET 2026 ══ -->
+<div id="page-budget" class="page">
+
+  <section class="camp-hero">
+    <div class="camp-hero-in">
+      <span class="camp-eyebrow">Active Campaign &middot; 2026</span>
+      <h1 class="camp-title">2026/2027 National Budget Contribution</h1>
+      <p class="camp-sub">Hon. Justina Jonas's public campaign around this year's budget cycle &mdash; contributions on specific departmental votes, Bills, and Motions raised in the National Assembly. Each post frames what the numbers mean for Namibian workers and communities.</p>
+      <div class="camp-stats">
+        <div class="camp-stat"><div class="camp-stat-n">17</div><div class="camp-stat-l">Posts in the series</div></div>
+        <div class="camp-stat"><div class="camp-stat-n">12</div><div class="camp-stat-l">Budget votes covered</div></div>
+        <div class="camp-stat"><div class="camp-stat-n">3</div><div class="camp-stat-l">Bills &amp; Motions</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="camp-wrap">
+    <div class="camp-in">
+      <div class="camp-filter" id="camp-filter">
+        <button class="on" data-f="all" onclick="campFilter(this)">All</button>
+        <button data-f="budget" onclick="campFilter(this)">Budget Votes</button>
+        <button data-f="bill" onclick="campFilter(this)">Bills</button>
+        <button data-f="motion" onclick="campFilter(this)">Motions</button>
+      </div>
+      <div class="camp-grid" id="camp-grid">
+        <div class="camp-card" data-cat="budget" onclick="jjLb('media/campaign/BIG-01-Works.png','Vote — Works &amp; Transport · Labour rights monitoring on every public project')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-01-Works.png" alt="Labour rights monitoring on every public project" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Vote &mdash; Works &amp; Transport</div><div class="camp-h">Labour rights monitoring on every public project</div></div>
+        </div>
+        <div class="camp-card" data-cat="bill" onclick="jjLb('media/campaign/BIG-02-Council.png','National Construction Council Bill · The Bill is long overdue')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-02-Council.png" alt="The Bill is long overdue" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">National Construction Council Bill</div><div class="camp-h">The Bill is long overdue</div></div>
+        </div>
+        <div class="camp-card" data-cat="budget" onclick="jjLb('media/campaign/BIG-03-Health.png','Vote 13 — Health &amp; Social Services · No health system without a strong workforce')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-03-Health.png" alt="No health system without a strong workforce" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Vote 13 &mdash; Health &amp; Social Services</div><div class="camp-h">No health system without a strong workforce</div></div>
+        </div>
+        <div class="camp-card" data-cat="budget" onclick="jjLb('media/campaign/BIG-04-Overtime.png','Vote 13 — Rural Health Workers · Rural service must not mean exploitation')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-04-Overtime.png" alt="Rural service must not mean exploitation" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Vote 13 &mdash; Rural Health Workers</div><div class="camp-h">Rural service must not mean exploitation</div></div>
+        </div>
+        <div class="camp-card" data-cat="budget" onclick="jjLb('media/campaign/BIG-05-Labour.png','Vote 14 — Department of Labour Relations · Too few inspectors to enforce the law')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-05-Labour.png" alt="Too few inspectors to enforce the law" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Vote 14 &mdash; Department of Labour Relations</div><div class="camp-h">Too few inspectors to enforce the law</div></div>
+        </div>
+        <div class="camp-card" data-cat="budget" onclick="jjLb('media/campaign/BIG-06-Mines.png','Vote 15 — Mines, Energy &amp; Industries · A just transition for mineworkers')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-06-Mines.png" alt="A just transition for mineworkers" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Vote 15 &mdash; Mines, Energy &amp; Industries</div><div class="camp-h">A just transition for mineworkers</div></div>
+        </div>
+        <div class="camp-card" data-cat="budget" onclick="jjLb('media/campaign/BIG-07-Petroleum.png','Vote 15 — Petroleum Sector · Namibians must do more than support work')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-07-Petroleum.png" alt="Namibians must do more than support work" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Vote 15 &mdash; Petroleum Sector</div><div class="camp-h">Namibians must do more than support work</div></div>
+        </div>
+        <div class="camp-card" data-cat="budget" onclick="jjLb('media/campaign/BIG-08-Gender.png','Vote 36 — Gender Equality · Gender equality must reach the workplace')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-08-Gender.png" alt="Gender equality must reach the workplace" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Vote 36 &mdash; Gender Equality &amp; Child Welfare</div><div class="camp-h">Gender equality must reach the workplace</div></div>
+        </div>
+        <div class="camp-card" data-cat="budget" onclick="jjLb('media/campaign/BIG-09-Women.png','Vote 36 — Working Women · Central stakeholders, not beneficiaries')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-09-Women.png" alt="Central stakeholders, not beneficiaries" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Vote 36 &mdash; Working Women</div><div class="camp-h">Central stakeholders, not beneficiaries</div></div>
+        </div>
+        <div class="camp-card" data-cat="budget" onclick="jjLb('media/campaign/BIG-10-ICT.png','Vote 29 — ICT · A digital Namibia open to all')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-10-ICT.png" alt="A digital Namibia open to all" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Vote 29 &mdash; ICT</div><div class="camp-h">A digital Namibia open to all</div></div>
+        </div>
+        <div class="camp-card" data-cat="budget" onclick="jjLb('media/campaign/BIG-11-Assembly.png','Vote 03 — National Assembly · Fund the committees that hold power to account')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-11-Assembly.png" alt="Fund the committees that hold power to account" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Vote 03 &mdash; National Assembly</div><div class="camp-h">Fund the committees that hold power to account</div></div>
+        </div>
+        <div class="camp-card" data-cat="budget" onclick="jjLb('media/campaign/BIG-12-Parliament.png','Vote 03 — National Assembly · A weakened Parliament weakens democracy')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-12-Parliament.png" alt="A weakened Parliament weakens democracy" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Vote 03 &mdash; National Assembly</div><div class="camp-h">A weakened Parliament weakens democracy</div></div>
+        </div>
+        <div class="camp-card" data-cat="motion" onclick="jjLb('media/campaign/BIG-13-Trees.png','Motion — Urban &amp; Rural Greening · Trees are national assets')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-13-Trees.png" alt="Trees are national assets" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Motion &mdash; Urban &amp; Rural Greening</div><div class="camp-h">Trees are national assets</div></div>
+        </div>
+        <div class="camp-card" data-cat="motion" onclick="jjLb('media/campaign/BIG-14-Greening.png','Motion — Urban &amp; Rural Greening · Fragmented efforts are not enough')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-14-Greening.png" alt="Fragmented efforts are not enough" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Motion &mdash; Urban &amp; Rural Greening</div><div class="camp-h">Fragmented efforts are not enough</div></div>
+        </div>
+        <div class="camp-card" data-cat="bill" onclick="jjLb('media/campaign/BIG-15-Petroleum-Bill.png','Petroleum Amendment Bill 2025 · Begin with the Namibian worker')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-15-Petroleum-Bill.png" alt="Begin with the Namibian worker" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Petroleum Amendment Bill 2025</div><div class="camp-h">Begin with the Namibian worker</div></div>
+        </div>
+        <div class="camp-card" data-cat="bill" onclick="jjLb('media/campaign/BIG-16-Offshore.png','Petroleum Bill — Labour Protections · Oil and gas without labour justice is not development')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-16-Offshore.png" alt="Oil and gas without labour justice is not development" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Petroleum Bill &mdash; Labour Protections</div><div class="camp-h">Oil and gas without labour justice is not development</div></div>
+        </div>
+        <div class="camp-card" data-cat="bill" onclick="jjLb('media/campaign/BIG-17-Safety.png','Petroleum Bill — Offshore Safety · Our labour laws are not ready for offshore work')">
+          <div class="camp-thumb"><img src="media/campaign/BIG-17-Safety.png" alt="Our labour laws are not ready for offshore work" loading="lazy"/></div>
+          <div class="camp-meta"><div class="camp-vote">Petroleum Bill &mdash; Offshore Safety</div><div class="camp-h">Our labour laws are not ready for offshore work</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shareable Graphics (smaller versions for social) -->
+  <section class="share-wrap">
+    <div class="share-in">
+      <div class="share-head">
+        <h3>Share the Campaign</h3>
+        <p>Ten shareable graphics sized for social media. Right-click (or long-press) any tile to save the image, then share it on Facebook, WhatsApp, X or Instagram.</p>
+      </div>
+      <div class="share-grid">
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/01-Works.png','Works &amp; Transport · Labour rights monitoring on every public project')"><img src="media/campaign/shares/01-Works.png" alt="Works" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/02-Council.png','National Construction Council Bill · The Bill is long overdue')"><img src="media/campaign/shares/02-Council.png" alt="Council" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/03-Health.png','Health &amp; Social Services · No health system without a strong workforce')"><img src="media/campaign/shares/03-Health.png" alt="Health" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/04-Overtime.png','Rural Health Workers · Rural service must not mean exploitation')"><img src="media/campaign/shares/04-Overtime.png" alt="Overtime" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/05-Labour.png','Department of Labour Relations · Too few inspectors to enforce the law')"><img src="media/campaign/shares/05-Labour.png" alt="Labour" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/06-Mines.png','Mines, Energy &amp; Industries · A just transition for mineworkers')"><img src="media/campaign/shares/06-Mines.png" alt="Mines" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/07-Petroleum.png','Petroleum Sector · Namibians must do more than support work')"><img src="media/campaign/shares/07-Petroleum.png" alt="Petroleum" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/08-Gender.png','Gender Equality &amp; Child Welfare · Gender equality must reach the workplace')"><img src="media/campaign/shares/08-Gender.png" alt="Gender" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/09-Women.png','Working Women · Central stakeholders, not beneficiaries')"><img src="media/campaign/shares/09-Women.png" alt="Women" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/10-ICT.png','ICT · A digital Namibia open to all')"><img src="media/campaign/shares/10-ICT.png" alt="ICT" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/11-Assembly.png','National Assembly · Fund the committees that hold power to account')"><img src="media/campaign/shares/11-Assembly.png" alt="Assembly" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/12-Parliament.png','National Assembly · A weakened Parliament weakens democracy')"><img src="media/campaign/shares/12-Parliament.png" alt="Parliament" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/13-Trees.png','Motion — Urban &amp; Rural Greening · Trees are national assets')"><img src="media/campaign/shares/13-Trees.png" alt="Trees" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/14-Greening.png','Motion — Urban &amp; Rural Greening · Fragmented efforts are not enough')"><img src="media/campaign/shares/14-Greening.png" alt="Greening" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/15-Petroleum-Bill.png','Petroleum Amendment Bill 2025 · Begin with the Namibian worker')"><img src="media/campaign/shares/15-Petroleum-Bill.png" alt="Petroleum Bill" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/16-Offshore.png','Petroleum Bill — Labour Protections · Oil and gas without labour justice is not development')"><img src="media/campaign/shares/16-Offshore.png" alt="Offshore" loading="lazy"/></div>
+        <div class="share-tile" onclick="jjLb('media/campaign/shares/17-Safety.png','Petroleum Bill — Offshore Safety · Our labour laws are not ready for offshore work')"><img src="media/campaign/shares/17-Safety.png" alt="Offshore Safety" loading="lazy"/></div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!-- ════════════════════════════════════ PARLIAMENTARY WORK ══ -->
 <div id="page-parl" class="page">
   <section class="pbg" style="min-height:38vh">
-    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" class="pbg-img"/>
+    <img src="media/photos/portrait-blue-dress.jpg" alt="" class="pbg-img"/>
     <div class="pbg-ov"></div>
     <div class="Wm pbg-in" style="text-align:center">
       <span class="badge blight">8th National Assembly · 2025–2030</span>
@@ -854,7 +1108,7 @@ textarea.ff{resize:none;height:110px;}
         <div class="sh"><h2>Parliamentary Record</h2><div class="gline"></div><p>Professionally documented contributions since March 2025 — sourced from National Assembly order papers, The Namibian, and IndustriALL Global Union.</p></div>
         <div class="pe-list">
           <div class="pe-card">
-  <div class="pe-photo"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Maiden Speech: 2025/26 National Budget Debate"/><div class="pe-photo-ov"></div></div>
+  <div class="pe-photo"><img src="media/photos/portrait-blue-dress.jpg" alt="Maiden Speech: 2025/26 National Budget Debate"/><div class="pe-photo-ov"></div></div>
   <div class="pe-body">
     <div class="pe-meta">
       <span class="pe-badge" style="background:#1a5c1a22;color:#1a5c1a;border:1px solid #1a5c1a55">Maiden Speech</span>
@@ -866,7 +1120,7 @@ textarea.ff{resize:none;height:110px;}
   </div>
 </div>
 <div class="pe-card">
-  <div class="pe-photo"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Social Protection Parliamentary Oversight Workshop — Swakopmund"/><div class="pe-photo-ov"></div></div>
+  <div class="pe-photo"><img src="media/photos/portrait-blue-dress.jpg" alt="Social Protection Parliamentary Oversight Workshop — Swakopmund"/><div class="pe-photo-ov"></div></div>
   <div class="pe-body">
     <div class="pe-meta">
       <span class="pe-badge" style="background:#1a3d7a22;color:#1a3d7a;border:1px solid #1a3d7a55">Committee Work</span>
@@ -878,7 +1132,7 @@ textarea.ff{resize:none;height:110px;}
   </div>
 </div>
 <div class="pe-card">
-  <div class="pe-photo"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Kunene Region Poverty Eradication Committee Visit"/><div class="pe-photo-ov"></div></div>
+  <div class="pe-photo"><img src="media/photos/portrait-blue-dress.jpg" alt="Kunene Region Poverty Eradication Committee Visit"/><div class="pe-photo-ov"></div></div>
   <div class="pe-body">
     <div class="pe-meta">
       <span class="pe-badge" style="background:#2d7a4522;color:#2d7a45;border:1px solid #2d7a4555">Oversight Visit</span>
@@ -890,7 +1144,7 @@ textarea.ff{resize:none;height:110px;}
   </div>
 </div>
 <div class="pe-card">
-  <div class="pe-photo"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Fixed-Term Contracts & Exploitation in the Workplace"/><div class="pe-photo-ov"></div></div>
+  <div class="pe-photo"><img src="media/photos/portrait-blue-dress.jpg" alt="Fixed-Term Contracts & Exploitation in the Workplace"/><div class="pe-photo-ov"></div></div>
   <div class="pe-body">
     <div class="pe-meta">
       <span class="pe-badge" style="background:#7a1a1a22;color:#7a1a1a;border:1px solid #7a1a1a55">Debate</span>
@@ -902,7 +1156,7 @@ textarea.ff{resize:none;height:110px;}
   </div>
 </div>
 <div class="pe-card">
-  <div class="pe-photo"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Manufacturing Sector Investment Advocacy"/><div class="pe-photo-ov"></div></div>
+  <div class="pe-photo"><img src="media/photos/portrait-blue-dress.jpg" alt="Manufacturing Sector Investment Advocacy"/><div class="pe-photo-ov"></div></div>
   <div class="pe-body">
     <div class="pe-meta">
       <span class="pe-badge" style="background:#4a358022;color:#4a3580;border:1px solid #4a358055">Policy Advocacy</span>
@@ -914,7 +1168,7 @@ textarea.ff{resize:none;height:110px;}
   </div>
 </div>
 <div class="pe-card">
-  <div class="pe-photo"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Mining Sector Labour Audit — 11 Mines Investigated Across 5 Regions"/><div class="pe-photo-ov"></div></div>
+  <div class="pe-photo"><img src="media/photos/portrait-blue-dress.jpg" alt="Mining Sector Labour Audit — 11 Mines Investigated Across 5 Regions"/><div class="pe-photo-ov"></div></div>
   <div class="pe-body">
     <div class="pe-meta">
       <span class="pe-badge" style="background:#7a1a1a22;color:#7a1a1a;border:1px solid #7a1a1a55">Major Report</span>
@@ -1447,7 +1701,7 @@ textarea.ff{resize:none;height:110px;}
   </section>
 
   <section class="pbg" style="min-height:38vh">
-    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" class="pbg-img"/>
+    <img src="media/photos/portrait-blue-dress.jpg" alt="" class="pbg-img"/>
     <div class="pbg-ov"></div>
     <div class="Wm pbg-in" style="text-align:center">
       <span class="badge blight">Outreach &amp; Engagement</span>
@@ -1468,15 +1722,15 @@ textarea.ff{resize:none;height:110px;}
         <div class="sh"><h2>Visits &amp; Outreach</h2><div class="gline"></div><p>Hon. Justina Jonas regularly participates in outreach visits, oversight missions, and public engagements across Namibia — listening directly to workers, families, and community members.</p></div>
         <div class="ofc-grid">
           <a href="https://www.facebook.com/share/p/1CHGD2JsPo/" target="_blank" rel="noopener" class="ofc">
-            <div class="ofc-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Community Outreach Visit"/><div class="ofc-img-ov"></div></div>
+            <div class="ofc-img"><img src="media/photos/portrait-blue-dress.jpg" alt="Community Outreach Visit"/><div class="ofc-img-ov"></div></div>
             <div class="ofc-body"><h3>Community Outreach Visit</h3><p>Engaging directly with citizens to understand local challenges and assess development progress on the ground.</p><span class="ofc-lnk">View on Facebook &#8599;</span></div>
           </a>
           <a href="https://www.facebook.com/justina.jonas.526/posts/pfbid0ATXmnWDiTZC32EK84qw4v6D6iAuwbEgS562FnV3kk12vJZyvKNA6qPoeH8xhy96Ul" target="_blank" rel="noopener" class="ofc">
-            <div class="ofc-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Stakeholder Meeting"/><div class="ofc-img-ov"></div></div>
+            <div class="ofc-img"><img src="media/photos/portrait-blue-dress.jpg" alt="Stakeholder Meeting"/><div class="ofc-img-ov"></div></div>
             <div class="ofc-body"><h3>Field Engagement — Stakeholder Meeting</h3><p>Meeting with local stakeholders to discuss community needs, development priorities, and programme accountability.</p><span class="ofc-lnk">View on Facebook &#8599;</span></div>
           </a>
           <a href="https://www.facebook.com/justina.jonas.526/posts/pfbid02zZrAySoGsPeYYoP7wXzNvj3qALUHEwo8MVheKvpxnLsjnKpPRK8gLtz1xJQhoAPRl" target="_blank" rel="noopener" class="ofc">
-            <div class="ofc-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Oversight Visit"/><div class="ofc-img-ov"></div></div>
+            <div class="ofc-img"><img src="media/photos/portrait-blue-dress.jpg" alt="Oversight Visit"/><div class="ofc-img-ov"></div></div>
             <div class="ofc-body"><h3>Oversight Visit — Community Project</h3><p>Assessing progress on community development initiatives and engaging with project participants firsthand.</p><span class="ofc-lnk">View on Facebook &#8599;</span></div>
           </a>
         </div>
@@ -2159,7 +2413,7 @@ textarea.ff{resize:none;height:110px;}
 </div>
 
 <script>
-const PAGES={'home':0,'about':1,'parl':2,'community':3,'media':4,'contact':5};
+const PAGES={'home':0,'about':1,'budget':2,'parl':3,'community':4,'media':5,'contact':6};
 function go(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
@@ -2196,6 +2450,15 @@ function switchTab(e,group,tab){
   document.querySelectorAll('[id^="'+pfx+'"]').forEach(p=>p.classList.remove('on'));
   document.getElementById(pfx+tab).classList.add('on');
   e.target.classList.add('on');
+}
+
+function campFilter(btn){
+  document.querySelectorAll('#camp-filter button').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  var f=btn.dataset.f;
+  document.querySelectorAll('.camp-card').forEach(function(c){
+    c.style.display=(f==='all'||c.dataset.cat===f)?'':'none';
+  });
 }
 </script>
 
